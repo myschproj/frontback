@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Связь со мной</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="header">КОНТАКТЫ</div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/A1zen06" target="_blank">Практики</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <p class="zag"> Контакты</p>
+            <section class="con-section">
+                <div class="con-container">
+                    <h4 style="font-size: 40px;">Связаться со мной</h4>
+                    <p>Телефон:</p>
+                    <h4 style="font-size: 30px; margin-bottom: 50px;">+7 (123) 456-78-99</h5>
+                        <p>E-mail:</p>
+                        <h4 style="font-size: 30px; margin-bottom: 50px;">krasnikov.k.r@edu.mirea.ru</h5>
+                            <p>Адрес</p>
+                            <h4 style="font-size: 30px; margin-bottom: 50px;">г. Москва, ул. Пушкина, д. Колотушкина
+                                </h5>
+                                <p>Время работы</p>
+                                <h4 style="font-size: 30px; margin-bottom: 50px;">Круглосуточно 24/7</h4>
+                                <p>Мессенджеры и социальные сети:</p>
+                                <div class="contact_buttons">
+                                    <a href="https://web.telegram.org" target="_blank" class="buttons">
+                                        <img src="../images/telegram.png" alt="telegram" width="50" height="50">
+                                    </a>
+                                    <a href="https://github.com/A1zen06" target="_blank" class="buttons">
+                                        <img src="../images/github-mark.png" alt="GitHub" width="50" height="50">
+                                    </a>
+                                    <a href="https://steamcommunity.com/profiles/76561199030300268/" target="_blank"
+                                        class="buttons">
+                                        <img src="../images/steam.png" alt="steam" width="50" height="50">
+                                    </a>
+                                </div>
+                </div>
+                <script type="text/javascript" charset="utf-8" async
+                    src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2254c965f2fed811ae71b7d61d9e95b786cb007ad8b465291d38e07ce726077f&amp;width=851&amp;height=405&amp;lang=ru_RU&amp;scroll=true"></script>
+            </section>
+            <!--<section class="contacts-section">
+                <div class="contacts">
+                    <h3 class="zag-goods">Электронная почта</h3>
+                    <p>Адрес электронной почты: krasnikov.k.r@edu.mirea.ru</p>
+                </div>
+                <div class="contacts">
+                    <h3 class="zag-goods">Физический адрес</h3>
+                    <p>Адрес: г. Москва, ул. Пушкина, д. Колотушкина</p>
+                </div>
+                <div class="contacts">
+                    <h3 class="zag-goods">Физический номер</h3>
+                    <p>Номер телефона: +7 (123) 456-78-99</p>
+                </div> -->
+            <button class="learn-more" onclick="contactModal.showModal()">
+                <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">Связаться</span>
+            </button>
+            </section>
+            <dialog id="contactModal">
+                <div class="modal-header">
+                    <h2>Форма обратной связи</h2>
+                </div>
+
+                <div class="modal-content">
+                    <form id="feedbackForm" method="dialog">
+                        <div class="form-group">
+                            <label for="name">Имя <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Телефон: <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Электронная почта: <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Категория обращения <span class="required">*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="">Выберите категорию</option>
+                                <option value="technical">Техническая поддержка</option>
+                                <option value="commercial">Коммерческое предложение</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Текст обращения <span class="required">*</span></label>
+                            <textarea id="message" name="message" required
+                                placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                        </div>
+
+                        <div class="modal-actions">
+                            <!-- Кнопка отмены с автоматическим закрытием через form method="dialog" -->
+                            <button type="submit" class="btn btn-secondary">Отмена</button>
+                            <!-- Кнопка отправки с обработкой через JavaScript -->
+                            <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </dialog>
+        </main>
+        <footer>
+            <p>Все права защищены.</p>
+            <p>© sky.net</p>
+        </footer>
+    </div>
+</body>
+
+</html>
